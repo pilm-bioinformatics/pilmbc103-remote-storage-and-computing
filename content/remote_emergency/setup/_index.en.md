@@ -11,7 +11,7 @@ tags: ["ssh", "rsa", "connection"]
 
 ```
 cd
-wget https://github.com/pilm-bioinformatics/core/raw/master/workshops/pilm103/pilm103_rsa
+curl -L  https://github.com/pilm-bioinformatics/core/raw/master/workshops/pilm103/pilm103_rsa -o pilm103_rsa
 ```
 
 Look for the `pilm03_rsa` file. Normally is good to save it inside the `~.ssh/` folder so it is private. Copy the file to that location:

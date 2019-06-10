@@ -25,14 +25,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://pilm-bioinformatics.github.io/pilmbc103-remote-storage-and-computing/remote_emergency/setup/</guid>
-      <description>setup your credentials Get the credential files cd wget https://github.com/pilm-bioinformatics/core/raw/master/workshops/pilm103/pilm103_rsa  Look for the pilm03_rsa file. Normally is good to save it inside the ~.ssh/ folder so it is private. Copy the file to that location:
+      <description>setup your credentials Get the credential files cd curl -L https://github.com/pilm-bioinformatics/core/raw/master/workshops/pilm103/pilm103_rsa -o pilm103_rsa  Look for the pilm03_rsa file. Normally is good to save it inside the ~.ssh/ folder so it is private. Copy the file to that location:
 mkdir -p ~/.ssh
 mv pilm103_rsa ~/.ssh/.
 Check the file permission: ll ~/.ssh/pilm103_rsa
 It should show something like this:
 -rw-------@ 1 lpantano staff 1.7K May 23 10:32 /Users/lpantano/.ssh/pilm103_rsa
-If not, type this:
-chmod 600 ~/.</description>
+If not, type this:</description>
     </item>
     
     <item>
