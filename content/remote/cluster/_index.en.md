@@ -7,7 +7,8 @@ tags: ["slurm", "cluster"]
 
 ## most used commands on a cluster
 
-Full tutorial to learn [hpc](https://epcced.github.io/hpc-intro/010-hpc-concepts/). A cluster has two types of computers:
+Full tutorial to learn [hpc](https://epcced.github.io/hpc-intro/010-hpc-concepts/). 
+For users, a cluster has two main types of computers:
 
 * login node
 * computing node
@@ -19,7 +20,7 @@ srun --time=0:1:00 --mem=200  -c 1 --pty --partition=sched_any /bin/bash
 ```
 
 {{% notice info %}}
-Notice how the computer names has change to something like `nodeXXX`
+Notice how the computer names has changed to something like `nodeXXX`
 {{% /notice %}}
 
 
@@ -39,14 +40,14 @@ Download the [script](https://github.com/pilm-bioinformatics/core/raw/master/wor
 
 `wget https://github.com/pilm-bioinformatics/core/raw/master/workshops/pilm103/run_test.slurm`
 
-It looks like that:
+It looks like this:
 
 ```
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH --mem=200
-#SBATCH -t 00:1:00
+#SBATCH -t 00:1:10
 #SBATCH -J "init"
 #SBATCH -e run.e
 #SBATCH -o run.o
@@ -93,7 +94,7 @@ srun --time=0:15:00 --mem=2000 -c 1  --pty  /bin/bash
 #SBATCH -N 1
 #SBATCH -c 1
 #SBATCH --mem=200
-#SBATCH -t 24:00:00
+#SBATCH -t 0:00:70
 #SBATCH -J "init"
 #SBATCH -e run.e
 #SBATCH -o run.o
