@@ -22,21 +22,23 @@ graph LR;
     E -->|job2| G[compute node 2]
 ```
 
-How you jobs get schedule:
+How fast will your jobs schedule depends on two main factors:
 
-- According to the requested resources/ available resources
-- According your **Fairshare** score:
+- The requested resources vs available resources
+- According to your **Fairshare** score:
   - number of jobs/resources requested in the past
   - precision of the resources requested vs needed
   
 ## Summary
 
-- transfer
-  - `sshfs` to mount remote folders
-  - `rsync` to transfer files
-- cluster
+- Data transfer
+  - `sshfs` to access remote folders on your computer
+  - `rsync` to transfer files efficiently
+- Cluster usage
   - `srun` for interactive or on the spot Jobs
-  - `sbatch` for automatize Jobs
-  - `-c` to aks for number of cores
-  - `--mem` to ask for memory in **Mb** (2000 is 2GB)
-  - `--time=d-hh:mm:00` to define limit duration
+  - `sbatch` for submitting jobs that will run at a later time
+ - Basic cluster flags
+  - `-N X` to ask for maximum amount of machines/nodes (each node has multiple cores)
+  - `-c X` to ask for maximum amount of cores 
+  - `--mem Y` to ask for the maximum amount of memory your job will requre, in **Mb** (2000 is 2GB)
+  - `--time=d-hh:mm:00` to ask for the maximum amount of time that your job will require
